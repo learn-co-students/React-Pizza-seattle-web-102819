@@ -70,6 +70,7 @@ class App extends Component {
         pizzas: updatedPizzas
       }) 
     })
+    this.resetNewPizza()
   }
 
   render() {
