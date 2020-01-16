@@ -36,19 +36,25 @@ class App extends Component {
     })
   }
 
-  handleOnChange = (e) => {
+  handleChange = (e) => {
+    console.log(e.target)
+    const val = e.target.value
 
-    if (e.target.value === 'Vegetarian') {
+    if (val === 'Vegetarian') {
       this.setState({
         newPizza: {...this.state.newPizza, vegetarian: true}
       })
-    } else if (e.target.value === 'Not Vegetarian') {
+    } else if (val === 'Not Vegetarian') {
       this.setState({
         newPizza: {...this.state.newPizza, vegetarian: false}
       })
     } else {
+      const name = e.target.name
+      const obj = {
+        [name]:val
+      }
       this.setState({
-        newPizza: {...this.state.newPizza, [e.target.name]: e.target.value}
+        newPizza: {...this.state.newPizza, ...obj}
       })
     }
   }
@@ -77,7 +83,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header/>
-        <PizzaForm currentPizza={this.state.newPizza} updatePizza={this.updatePizza} handleOnChange={this.handleOnChange}/>
+        <PizzaForm currentPizza={this.state.newPizza} updatePizza={this.updatePizza} handleChange={this.handleChange}/>
         <PizzaList pizzas={this.state.pizzas} editPizza={this.editPizza}/>
       </Fragment>
     );

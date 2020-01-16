@@ -4,13 +4,15 @@
       "id": 1,
       "topping": "Plain",
       "size": "Small",
-      "vegetarian": false
+      "vegetarian": true,
+      "": "Medium"
     },
     {
       "id": 2,
       "topping": "Pepperoni",
       "size": "Small",
-      "vegetarian": false
+      "vegetarian": false,
+      "": "Medium"
     },
     {
       "id": 3,

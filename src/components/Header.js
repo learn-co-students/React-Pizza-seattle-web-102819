@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
+
 class Header extends Component {
 
   render() {
@@ -9,7 +10,6 @@ class Header extends Component {
       </Fragment>
     );
   }
-
 }
 
 export default Header;
